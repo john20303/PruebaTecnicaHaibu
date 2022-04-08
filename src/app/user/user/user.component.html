@@ -1,0 +1,38 @@
+<small>{{ fecha |date:"longDate" }}</small>, <small>Santiago.</small><h3>Lista de Usuarios</h3>
+<hr>
+<br>
+<form>
+  <input type="text" [(ngModel)]="nombre" class="form-control w-50" (input)="search()" name="nombre"
+      placeholder="search Nombre">
+
+</form>
+<br>
+
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Activo</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
+    <th scope="col">Telefono</th>
+    <th scope="col">Detalle</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users | paginate: { itemsPerPage: 5, currentPage: p };  index as i">
+    <th scope="row">{{user.nombre}}</th>
+    <td>{{user.nombre}}</td>
+    <td>{{user.apellido}}</td>
+    <td>{{user.telefono}}</td>
+    <td><i class="far fa-eye eye text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ver Detalle"
+      (click)="getUserById(user.id)"></i></td>
+  </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event" previousLabel="Atras" nextLabel="Siguiente"
+                     class="pagination"></pagination-controls>
+
+
+
+

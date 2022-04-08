@@ -1,0 +1,29 @@
+<small>{{ fecha |date:"longDate" }}</small>, <small>Santiago.</small><h3>Detalle de Usuarios</h3>
+<hr>
+<br>
+<br>
+>
+
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <ul class="list-group text-start">
+        <li class="list-group-item active text-center" aria-current="true">Detalle Usuario</li>
+        <li class="list-group-item"><strong>Nombre</strong>: <span>{{user.nombre}}</span></li>
+        <li class="list-group-item"><strong>Apellido</strong>: <span>{{user.apellido}}</span></li>
+        <li class="list-group-item"><strong>Telefono</strong>: <span>{{user.telefono}}</span></li>
+        <li class="list-group-item"><strong>Rut</strong>: <span>{{user.rut}}</span></li>
+        <li class="list-group-item"><strong>Fecha de Nacimiento</strong>: <span>{{user.fechaNacimiento}}</span></li>
+        <li class="list-group-item"><strong>Calle</strong>: <span>{{user.direccion.calle}}</span></li>
+        <li class="list-group-item"><strong>Comuna</strong>: <span>{{user.direccion.comuna}}</span></li>
+        <li class="list-group-item"><strong>Numero</strong>: <span>{{user.direccion.numero}}</span></li>
+      </ul>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+
